@@ -4,6 +4,7 @@ LIBS:device
 LIBS:linear
 LIBS:tmc2660
 LIBS:Connector
+LIBS:tmc2660-quadrigotion-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -171,7 +172,7 @@ U 1 1 5576913F
 P 5500 3300
 F 0 "P3" H 5500 3550 50  0000 C CNN
 F 1 "Motor" V 5600 3300 50  0000 C CNN
-F 2 "Connectors_JST:JST_VH_B4P-VH_4x3.96mm_Vertical" H 5500 3300 60  0001 C CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 5500 3300 60  0001 C CNN
 F 3 "" H 5500 3300 60  0000 C CNN
 	1    5500 3300
 	1    0    0    -1  
