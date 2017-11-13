@@ -63,6 +63,7 @@ plot_plan = [
 for layer_info in plot_plan:
     pctl.SetLayer(layer_info[0])
     pctl.OpenPlotfile(layer_info[1], PLOT_FORMAT_GERBER, layer_info[2])
+    # In case boardhouses can't deal with detailed names: this removes them.
     #pctl.OpenPlotfile("", PLOT_FORMAT_GERBER, layer_info[2])
     pctl.PlotLayer()
 
@@ -92,9 +93,9 @@ drlwriter.CreateDrillandMapFilesSet( plotDir, genDrl, genMap );
 # time, but we do want its name to be a bit different to show up on top.
 # So this is an ugly hack to rename the drl-file to have a 0 in the beginning.
 #print plotDir + "/" + basename + ".drl"
-#os.rename(plotDir + base_name + ".drl", plotDir + base_name + "-00.drl")
+os.rename(plotDir + base_name + ".drl", plotDir + base_name + "-00.drl")
 
-# Adapt some filenames
+# Adapt some filenames for some board-houses.
 #os.rename(plotDir + "/" + basename + ".drl", plotDir + "/" + basename + ".txt")
 #os.rename(plotDir + "/" + basename + ".g2", plotDir + "/" + basename + ".gl2")
 #os.rename(plotDir + "/" + basename + ".g3", plotDir + "/" + basename + ".gl3")
