@@ -4,7 +4,7 @@ LIBS:device
 LIBS:linear
 LIBS:tmc2660
 LIBS:Connector
-LIBS:tmc2660-quadrigotion-cache
+LIBS:tmc2660-quad-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -306,9 +306,9 @@ Wire Wire Line
 Wire Wire Line
 	2900 3950 2850 3950
 Wire Wire Line
-	2850 3950 2850 4000
+	2850 4000 2850 3950
 Wire Wire Line
-	2850 4000 2550 4000
+	2550 4000 2850 4000
 Text GLabel 3150 4250 3    50   Input ~ 0
 VMot
 $Comp
@@ -424,7 +424,7 @@ F 3 "" H 2550 4000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	2900 2850 2500 2850
+	2900 2850 2400 2850
 Wire Wire Line
 	2900 2950 2500 2950
 Wire Wire Line
@@ -479,4 +479,21 @@ Connection ~ 3750 2000
 Wire Wire Line
 	3750 2300 4050 2300
 Connection ~ 3900 2300
+Text GLabel 2050 2850 0    60   Input ~ 0
+GLOBAL_MISO
+$Comp
+L R J1
+U 1 1 5A0A53B6
+P 2250 2850
+F 0 "J1" V 2400 2850 50  0000 C CNN
+F 1 "0R" V 2250 2850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2180 2850 30  0001 C CNN
+F 3 "" H 2250 2850 30  0000 C CNN
+	1    2250 2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2050 2850 2100 2850
+Text Notes 2000 2800 0    60   ~ 0
+Optional
 $EndSCHEMATC
