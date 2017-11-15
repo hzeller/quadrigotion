@@ -36,7 +36,7 @@
   )
 
   (setup
-    (last_trace_width 0.4)
+    (last_trace_width 0.25)
     (user_trace_width 0.4)
     (user_trace_width 0.6)
     (user_trace_width 0.8)
@@ -160,7 +160,7 @@
     (add_net VMot)
   )
 
-  (module Mounting_Holes:MountingHole_2.7mm_M2.5 (layer F.Cu) (tedit 5A0A8EAD) (tstamp 5A0A83D7)
+  (module Mounting_Holes:MountingHole_2.7mm_M2.5 locked (layer F.Cu) (tedit 5A0A8EAD) (tstamp 5A0A83D7)
     (at 117.3 34.062)
     (descr "Mounting Hole 2.7mm, no annular, M2.5")
     (tags "mounting hole 2.7mm no annular m2.5")
@@ -180,7 +180,7 @@
       (clearance 0.7))
   )
 
-  (module Mounting_Holes:MountingHole_2.7mm_M2.5 (layer F.Cu) (tedit 5A0A86E5) (tstamp 5A0A82CA)
+  (module Mounting_Holes:MountingHole_2.7mm_M2.5 locked (layer F.Cu) (tedit 5A0A86E5) (tstamp 5A0A82CA)
     (at 117.3 69.062)
     (descr "Mounting Hole 2.7mm, no annular, M2.5")
     (tags "mounting hole 2.7mm no annular m2.5")
@@ -2207,7 +2207,7 @@
     (connect_pads (clearance 0.5))
     (min_thickness 0.254)
     (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
-    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
         (xy 114.2746 70.358) (xy 116.0526 72.136) (xy 118.5926 72.136) (xy 120.3706 70.358) (xy 120.3706 67.691)
