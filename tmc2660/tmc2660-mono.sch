@@ -288,22 +288,22 @@ NoConn ~ 2900 3700
 $Comp
 L power:GND #PWR010
 U 1 1 5672F758
-P 2650 2600
-F 0 "#PWR010" H 2650 2350 50  0001 C CNN
-F 1 "GND" H 2650 2450 50  0000 C CNN
-F 2 "" H 2650 2600 60  0000 C CNN
-F 3 "" H 2650 2600 60  0000 C CNN
-	1    2650 2600
-	1    0    0    -1  
+P 2800 2700
+F 0 "#PWR010" H 2800 2450 50  0001 C CNN
+F 1 "GND" H 2800 2550 50  0000 C CNN
+F 2 "" H 2800 2700 60  0000 C CNN
+F 3 "" H 2800 2700 60  0000 C CNN
+	1    2800 2700
+	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2650 2600 2900 2600
+	2050 2600 2900 2600
 Wire Wire Line
 	2900 3950 2850 3950
 Wire Wire Line
-	2850 4000 2850 3950
+	2850 3950 2850 4000
 Wire Wire Line
-	2550 4000 2850 4000
+	2850 4000 2550 4000
 Text GLabel 3150 4250 3    50   Input ~ 0
 VMot
 $Comp
@@ -340,10 +340,7 @@ F 3 "" H 4500 3300 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	2800 2600 2800 2700
-Wire Wire Line
 	2800 2700 2900 2700
-Connection ~ 2800 2600
 $Comp
 L device:C_Small C7
 U 1 1 568DEE7C
@@ -447,7 +444,6 @@ Connection ~ 4250 4000
 Wire Wire Line
 	4650 4150 4700 4150
 Connection ~ 4650 4150
-Connection ~ 4650 3150
 Connection ~ 4350 3300
 Wire Wire Line
 	4600 3150 4650 3150
@@ -491,4 +487,6 @@ Wire Wire Line
 	2050 2850 2100 2850
 Text Notes 2000 2800 0    60   ~ 0
 Optional
+Text GLabel 2050 2600 0    60   Input ~ 0
+~ENABLE
 $EndSCHEMATC
