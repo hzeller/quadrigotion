@@ -1,4 +1,4 @@
-update=Sat 11 Nov 2017 07:23:22 PM PST
+update=Tue 14 Nov 2017 06:08:01 PM PST
 version=1
 last_client=kicad
 [general]
@@ -30,10 +30,4 @@ BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
 [eeschema]
 version=1
-LibDir=../lib
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=linear
-LibName4=tmc2660
-LibName5=Connector
+LibDir=

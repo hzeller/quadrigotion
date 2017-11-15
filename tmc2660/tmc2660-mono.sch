@@ -1,10 +1,5 @@
-EESchema Schematic File Version 3
-LIBS:power
-LIBS:device
-LIBS:linear
-LIBS:tmc2660
-LIBS:Connector
-LIBS:tmc2660-quad-cache
+EESchema Schematic File Version 4
+LIBS:tmc2660-mono-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -20,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L C C4
+L device:C C4
 U 1 1 55767937
 P 4800 2700
 F 0 "C4" H 4825 2800 50  0000 L CNN
@@ -31,7 +26,7 @@ F 3 "" H 4800 2700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C5
+L device:C C5
 U 1 1 557679AB
 P 4800 3550
 F 0 "C5" H 4825 3650 50  0000 L CNN
@@ -42,7 +37,7 @@ F 3 "" H 4800 3550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 55767A6C
 P 4800 3700
 F 0 "#PWR01" H 4800 3450 50  0001 C CNN
@@ -53,7 +48,7 @@ F 3 "" H 4800 3700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L power:GND #PWR02
 U 1 1 55767A87
 P 4800 2850
 F 0 "#PWR02" H 4800 2600 50  0001 C CNN
@@ -64,7 +59,7 @@ F 3 "" H 4800 2850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L device:C C2
 U 1 1 55767A9A
 P 3450 2250
 F 0 "C2" H 3475 2350 50  0000 L CNN
@@ -83,7 +78,7 @@ Wire Wire Line
 Wire Wire Line
 	3950 2550 4800 2550
 $Comp
-L C C3
+L device:C C3
 U 1 1 55767EB4
 P 3750 2150
 F 0 "C3" H 3775 2250 50  0000 L CNN
@@ -95,7 +90,7 @@ F 3 "" H 3750 2150 60  0000 C CNN
 $EndComp
 Connection ~ 3600 2000
 $Comp
-L GND #PWR03
+L power:GND #PWR03
 U 1 1 55767EEE
 P 3900 2300
 F 0 "#PWR03" H 3900 2050 50  0001 C CNN
@@ -110,7 +105,7 @@ Wire Wire Line
 	3250 4250 3450 4250
 Connection ~ 3350 4250
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 5576833D
 P 3350 4250
 F 0 "#PWR04" H 3350 4000 50  0001 C CNN
@@ -124,7 +119,7 @@ Connection ~ 3950 2700
 Connection ~ 3950 3000
 Connection ~ 3950 3600
 $Comp
-L R R2
+L device:R R2
 U 1 1 557688AD
 P 4100 3150
 F 0 "R2" V 4200 3050 50  0000 C CNN
@@ -135,7 +130,7 @@ F 3 "" H 4100 3150 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R3
+L device:R R3
 U 1 1 55768AD7
 P 4100 4000
 F 0 "R3" V 4000 4100 50  0000 C CNN
@@ -146,7 +141,7 @@ F 3 "" H 4100 4000 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 55768AE6
 P 4700 4150
 F 0 "#PWR05" H 4700 3900 50  0001 C CNN
@@ -167,7 +162,7 @@ Text GLabel 4150 3750 2    60   Output ~ 0
 Wire Wire Line
 	3950 2700 4150 2700
 $Comp
-L Conn_01x04 P3
+L Connector:Conn_01x04 P3
 U 1 1 5576913F
 P 5500 3300
 F 0 "P3" H 5500 3550 50  0000 C CNN
@@ -186,7 +181,7 @@ Text GLabel 5300 3400 0    50   Input ~ 0
 Text GLabel 5300 3500 0    50   Input ~ 0
 1B2
 $Comp
-L C C1
+L device:C C1
 U 1 1 55769F99
 P 2750 3850
 F 0 "C1" H 2775 3950 50  0000 L CNN
@@ -197,7 +192,7 @@ F 3 "" H 2750 3850 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 55769FFF
 P 2600 3850
 F 0 "#PWR07" H 2600 3600 50  0001 C CNN
@@ -210,7 +205,7 @@ $EndComp
 Text GLabel 4800 2500 1    60   Input ~ 0
 VMot
 $Comp
-L TMC2660 U1
+L tmc2660:TMC2660 U1
 U 1 1 5576B0C2
 P 3500 3300
 F 0 "U1" H 3500 3600 60  0000 C CNN
@@ -249,7 +244,7 @@ Text Label 4000 3500 0    40   ~ 0
 Text Label 4000 3750 0    40   ~ 0
 1B2
 $Comp
-L GND #PWR08
+L power:GND #PWR08
 U 1 1 56711446
 P 2800 4300
 F 0 "#PWR08" H 2800 4050 50  0001 C CNN
@@ -260,7 +255,7 @@ F 3 "" H 2800 4300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C6
+L device:C C6
 U 1 1 56711673
 P 2800 4150
 F 0 "C6" H 2825 4250 50  0000 L CNN
@@ -272,7 +267,7 @@ F 3 "" H 2800 4150 60  0000 C CNN
 $EndComp
 Connection ~ 2800 4000
 $Comp
-L GND #PWR09
+L power:GND #PWR09
 U 1 1 5672E81A
 P 2550 2150
 F 0 "#PWR09" H 2550 1900 50  0001 C CNN
@@ -291,7 +286,7 @@ Wire Wire Line
 Connection ~ 2750 2000
 NoConn ~ 2900 3700
 $Comp
-L GND #PWR010
+L power:GND #PWR010
 U 1 1 5672F758
 P 2650 2600
 F 0 "#PWR010" H 2650 2350 50  0001 C CNN
@@ -312,7 +307,7 @@ Wire Wire Line
 Text GLabel 3150 4250 3    50   Input ~ 0
 VMot
 $Comp
-L GND #PWR011
+L power:GND #PWR011
 U 1 1 56739574
 P 3050 4250
 F 0 "#PWR011" H 3050 4000 50  0001 C CNN
@@ -323,7 +318,7 @@ F 3 "" H 3050 4250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R7
+L device:R R7
 U 1 1 568D6888
 P 4500 4150
 F 0 "R7" V 4400 4100 50  0000 C CNN
@@ -334,7 +329,7 @@ F 3 "" H 4500 4150 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R6
+L device:R R6
 U 1 1 568D6967
 P 4500 3300
 F 0 "R6" V 4400 3300 50  0000 C CNN
@@ -350,7 +345,7 @@ Wire Wire Line
 	2800 2700 2900 2700
 Connection ~ 2800 2600
 $Comp
-L C_Small C7
+L device:C_Small C7
 U 1 1 568DEE7C
 P 4500 3150
 F 0 "C7" V 4450 3000 50  0000 L CNN
@@ -363,7 +358,7 @@ $EndComp
 Wire Wire Line
 	3950 2900 4150 2900
 $Comp
-L C_Small C8
+L device:C_Small C8
 U 1 1 568DF320
 P 4500 4000
 F 0 "C8" V 4550 4050 50  0000 L CNN
@@ -413,7 +408,7 @@ STEP_1
 Text Label 2550 3400 0    60   ~ 0
 DIR_1
 $Comp
-L VCC #PWR06
+L power:VCC #PWR06
 U 1 1 5A07DCFD
 P 2550 4000
 F 0 "#PWR06" H 2550 3850 50  0001 C CNN
@@ -465,7 +460,7 @@ Wire Wire Line
 	4350 3300 4350 3150
 Connection ~ 4350 3150
 $Comp
-L CP C9
+L device:CP C9
 U 1 1 5A081AAE
 P 4050 2150
 F 0 "C9" H 4075 2250 50  0000 L CNN
@@ -482,7 +477,7 @@ Connection ~ 3900 2300
 Text GLabel 2050 2850 0    60   Input ~ 0
 GLOBAL_MISO
 $Comp
-L R J1
+L device:R J1
 U 1 1 5A0A53B6
 P 2250 2850
 F 0 "J1" V 2400 2850 50  0000 C CNN
