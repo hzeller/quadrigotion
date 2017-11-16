@@ -208,7 +208,7 @@
     (tags "resistor 0603")
     (path /5A0C6878/5A0CA6C8)
     (attr smd)
-    (fp_text reference J1 (at -1.905 0.127) (layer F.SilkS)
+    (fp_text reference J100 (at -1.905 0.127) (layer F.SilkS)
       (effects (font (size 0.7 0.7) (thickness 0.12)))
     )
     (fp_text value 0R (at 0 1.5 90) (layer F.Fab)
