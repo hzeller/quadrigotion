@@ -479,4 +479,26 @@ Text Label 4600 3050 0    60   ~ 0
 B2
 Wire Wire Line
 	4600 3050 4750 3050
+$Comp
+L Connector:Test_Point M100
+U 1 1 5A0FBC47
+P 1250 4300
+F 0 "M100" H 1308 4420 50  0000 L CNN
+F 1 "Mount" H 1308 4329 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5" H 1450 4300 50  0001 C CNN
+F 3 "~" H 1450 4300 50  0001 C CNN
+	1    1250 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Test_Point M101
+U 1 1 5A0FBD0F
+P 1650 4300
+F 0 "M101" H 1708 4420 50  0000 L CNN
+F 1 "Mount" H 1708 4329 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5" H 1850 4300 50  0001 C CNN
+F 3 "~" H 1850 4300 50  0001 C CNN
+	1    1650 4300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
