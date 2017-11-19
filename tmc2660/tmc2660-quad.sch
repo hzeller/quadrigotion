@@ -349,4 +349,26 @@ NoConn ~ 2800 3250
 Wire Wire Line
 	5350 5950 5850 5950
 Connection ~ 5850 5700
+$Comp
+L Mechanical:Mounting_Hole M0
+U 1 1 5A1112B3
+P 2300 4600
+F 0 "M0" H 2358 4720 50  0000 L CNN
+F 1 "Mount" H 2358 4629 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5" H 2500 4600 50  0001 C CNN
+F 3 "~" H 2500 4600 50  0001 C CNN
+	1    2300 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole M1
+U 1 1 5A1112BA
+P 2700 4600
+F 0 "M1" H 2758 4720 50  0000 L CNN
+F 1 "Mount" H 2758 4629 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5" H 2900 4600 50  0001 C CNN
+F 3 "~" H 2900 4600 50  0001 C CNN
+	1    2700 4600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
