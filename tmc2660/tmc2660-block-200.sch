@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
-LIBS:tmc2660-mono-cache
+LIBS:tmc2660-quad-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 5
 Title ""
 Date ""
 Rev ""
@@ -15,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L device:C C202
+L device:C C203
 U 1 1 5A0CA5B9
 P 4250 2250
-F 0 "C202" H 4275 2350 50  0000 L CNN
+F 0 "C203" H 4275 2350 50  0000 L CNN
 F 1 "10u" H 4275 2150 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 4288 2100 30  0001 C CNN
 F 3 "" H 4250 2250 60  0000 C CNN
@@ -26,10 +26,10 @@ F 3 "" H 4250 2250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C203
+L device:C C202
 U 1 1 5A0CA5C0
 P 4250 3100
-F 0 "C203" H 4275 3200 50  0000 L CNN
+F 0 "C202" H 4275 3200 50  0000 L CNN
 F 1 "10u" H 4275 3000 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206" H 4288 2950 30  0001 C CNN
 F 3 "" H 4250 3100 60  0000 C CNN
@@ -59,10 +59,10 @@ F 3 "" H 4250 2400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C206
+L device:C C205
 U 1 1 5A0CA5D3
 P 2900 1800
-F 0 "C206" H 2650 1900 50  0000 L CNN
+F 0 "C205" H 2650 1900 50  0000 L CNN
 F 1 "100n" H 2700 1700 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 2938 1650 30  0001 C CNN
 F 3 "" H 2900 1800 60  0000 C CNN
@@ -116,10 +116,10 @@ Connection ~ 3400 2250
 Connection ~ 3400 2550
 Connection ~ 3400 3150
 $Comp
-L device:R R202
+L device:R R203
 U 1 1 5A0CA5F8
 P 3550 2700
-F 0 "R202" V 3650 2700 50  0000 C CNN
+F 0 "R203" V 3650 2700 50  0000 C CNN
 F 1 "10R" V 3550 2700 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603" V 3480 2700 30  0001 C CNN
 F 3 "" H 3550 2700 30  0000 C CNN
@@ -127,10 +127,10 @@ F 3 "" H 3550 2700 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device:R R203
+L device:R R202
 U 1 1 5A0CA5FF
 P 3550 3550
-F 0 "R203" V 3450 3550 50  0000 C CNN
+F 0 "R202" V 3450 3550 50  0000 C CNN
 F 1 "10R" V 3550 3550 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603" V 3480 3550 30  0001 C CNN
 F 3 "" H 3550 3550 30  0000 C CNN
@@ -224,10 +224,10 @@ F 3 "" H 2250 3850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C207
+L device:C C206
 U 1 1 5A0CA648
 P 2250 3700
-F 0 "C207" H 1950 3700 50  0000 L CNN
+F 0 "C206" H 1950 3700 50  0000 L CNN
 F 1 "100n" H 2050 3600 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 2288 3550 30  0001 C CNN
 F 3 "" H 2250 3700 60  0000 C CNN
@@ -248,13 +248,13 @@ F 3 "" H 2250 2250 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1500 2150 2350 2150
+	2050 2150 2350 2150
 Wire Wire Line
 	2350 3500 2300 3500
 Wire Wire Line
 	2300 3500 2300 3550
 Wire Wire Line
-	2300 3550 2000 3550
+	2000 3550 2300 3550
 $Comp
 L power:GND #PWR0109
 U 1 1 5A0CA666
@@ -267,10 +267,10 @@ F 3 "" H 2500 3800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:R R201
+L device:R R200
 U 1 1 5A0CA66C
 P 3950 3700
-F 0 "R201" V 3850 3650 50  0000 C CNN
+F 0 "R200" V 3850 3650 50  0000 C CNN
 F 1 "0.075" V 3950 3700 50  0000 C CNN
 F 2 "Resistors_SMD:R_2512" V 3880 3700 30  0001 C CNN
 F 3 "" H 3950 3700 30  0000 C CNN
@@ -278,10 +278,10 @@ F 3 "" H 3950 3700 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L device:R R200
+L device:R R201
 U 1 1 5A0CA673
 P 3950 2850
-F 0 "R200" V 3850 2850 50  0000 C CNN
+F 0 "R201" V 3850 2850 50  0000 C CNN
 F 1 "0.075" V 3950 2850 50  0000 C CNN
 F 2 "Resistors_SMD:R_2512" V 3880 2850 30  0001 C CNN
 F 3 "" H 3950 2850 30  0000 C CNN
@@ -291,10 +291,10 @@ $EndComp
 Wire Wire Line
 	2250 2250 2350 2250
 $Comp
-L device:C_Small C200
+L device:C_Small C201
 U 1 1 5A0CA67B
 P 3950 2700
-F 0 "C200" V 3800 2600 50  0000 L CNN
+F 0 "C201" V 3800 2600 50  0000 L CNN
 F 1 "10n" V 3900 2750 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 3988 2550 30  0001 C CNN
 F 3 "" H 3950 2700 60  0000 C CNN
@@ -304,10 +304,10 @@ $EndComp
 Wire Wire Line
 	3400 2450 3600 2450
 $Comp
-L device:C_Small C201
+L device:C_Small C200
 U 1 1 5A0CA683
 P 3950 3550
-F 0 "C201" V 4000 3600 50  0000 L CNN
+F 0 "C200" V 4000 3600 50  0000 L CNN
 F 1 "10n" V 4000 3350 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 3988 3400 30  0001 C CNN
 F 3 "" H 3950 3550 60  0000 C CNN
@@ -350,7 +350,7 @@ STEP
 Text Label 2000 2950 0    60   ~ 0
 DIR
 Wire Wire Line
-	1250 2400 2350 2400
+	1850 2400 2350 2400
 Wire Wire Line
 	2350 2500 1250 2500
 Wire Wire Line
@@ -390,10 +390,10 @@ Wire Wire Line
 	3800 2850 3800 2700
 Connection ~ 3800 2700
 $Comp
-L device:CP C205
+L device:CP C207
 U 1 1 5A0CA6BD
 P 3500 1700
-F 0 "C205" H 3525 1800 50  0000 L CNN
+F 0 "C207" H 3525 1800 50  0000 L CNN
 F 1 "100u" H 3400 1900 50  0000 L CNN
 F 2 "Capacitors_THT:CP_Radial_D10.0mm_P5.00mm" H 3538 1550 30  0001 C CNN
 F 3 "" H 3500 1700 60  0000 C CNN
@@ -404,8 +404,8 @@ Connection ~ 3200 1550
 Wire Wire Line
 	3200 1850 3500 1850
 Connection ~ 3350 1850
-Text Notes 1600 2350 0    60   ~ 0
-Optional
+Text Notes 600  2400 0    51   ~ 0
+Jumper on\nhighest popuplated
 Text HLabel 3750 1550 2    60   Input ~ 0
 VMot
 Connection ~ 3500 1550
@@ -419,28 +419,23 @@ Text HLabel 2600 3800 3    60   Input ~ 0
 VMot
 Text HLabel 2000 3550 0    60   Input ~ 0
 VCC
-Text HLabel 1500 2150 0    60   Input ~ 0
+Text HLabel 2050 2150 0    60   Input ~ 0
 ~EN
 $Comp
 L device:R J200
 U 1 1 5A0CA6C8
-P 1400 2300
-F 0 "J200" V 1450 2100 50  0000 C CNN
-F 1 "0R" V 1400 2300 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 1330 2300 30  0001 C CNN
-F 3 "" H 1400 2300 30  0000 C CNN
-	1    1400 2300
-	0    -1   -1   0   
+P 1450 2350
+F 0 "J200" H 1550 2500 50  0000 C CNN
+F 1 "0R" V 1450 2350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 1380 2350 30  0001 C CNN
+F 3 "" H 1450 2350 30  0000 C CNN
+	1    1450 2350
+	1    0    0    -1  
 $EndComp
-Text HLabel 1250 2300 0    60   Input ~ 0
-GLOBAL_MISO
-Text HLabel 1250 2400 0    60   Input ~ 0
+Text HLabel 1250 2200 0    60   Input ~ 0
+START_MOSI
+Text HLabel 1850 2400 0    60   Input ~ 0
 MISO
-Wire Wire Line
-	1550 2300 1600 2300
-Wire Wire Line
-	1600 2300 1600 2400
-Connection ~ 1600 2400
 Text HLabel 1250 2500 0    60   Input ~ 0
 MOSI
 Text HLabel 1250 2600 0    60   Input ~ 0
@@ -501,4 +496,7 @@ F 3 "~" H 1850 4300 50  0001 C CNN
 	1    1650 4300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1250 2200 1450 2200
+Connection ~ 1450 2500
 $EndSCHEMATC
