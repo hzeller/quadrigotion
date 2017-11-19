@@ -1,6 +1,6 @@
 # -*- Makefile -*-
 
-FABS=tmc2660-mono-fab.zip
+FABS=tmc2660-quad-fab.zip
 
 all : $(FABS)
 
