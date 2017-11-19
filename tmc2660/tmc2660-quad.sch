@@ -158,19 +158,11 @@ Wire Wire Line
 Wire Wire Line
 	4350 2250 3850 2250
 Wire Wire Line
-	3850 2250 3850 2700
-Wire Wire Line
-	3850 2700 3850 3550
-Wire Wire Line
-	3850 3550 3850 4850
-Wire Wire Line
-	3850 4850 3850 6150
+	3850 2250 3850 6150
 Wire Wire Line
 	3850 6150 4350 6150
 Wire Wire Line
-	5350 2250 5500 2250
-Wire Wire Line
-	5500 2250 6050 2250
+	5350 2250 6050 2250
 Wire Wire Line
 	5500 6150 5350 6150
 Wire Wire Line
@@ -180,15 +172,9 @@ Wire Wire Line
 	5350 3550 5500 3550
 Connection ~ 5500 3550
 Wire Wire Line
-	5350 2150 5650 2150
+	5350 2150 6050 2150
 Wire Wire Line
-	5650 2150 6050 2150
-Wire Wire Line
-	5650 2150 5650 3450
-Wire Wire Line
-	5650 3450 5650 4750
-Wire Wire Line
-	5650 4750 5650 6050
+	5650 2150 5650 6050
 Wire Wire Line
 	5650 6050 5350 6050
 Wire Wire Line
@@ -200,15 +186,9 @@ Connection ~ 5650 3450
 Wire Wire Line
 	5350 5700 5850 5700
 Wire Wire Line
-	5850 5700 5850 4400
+	5850 1800 5850 5950
 Wire Wire Line
-	5850 4400 5850 3100
-Wire Wire Line
-	5850 3100 5850 1800
-Wire Wire Line
-	5350 1800 5850 1800
-Wire Wire Line
-	5850 1800 6050 1800
+	5350 1800 6050 1800
 Wire Wire Line
 	5350 3100 5850 3100
 Connection ~ 5850 3100
@@ -226,9 +206,9 @@ CS
 Text GLabel 6050 2150 2    51   Input ~ 0
 SCLK
 Text GLabel 6050 1950 2    51   Output ~ 0
-MISO
+GLOBAL_MISO
 Text GLabel 6050 1800 2    51   Input ~ 0
-MOSI
+GLOBAL_MOSI
 Connection ~ 5850 1800
 Connection ~ 5650 2150
 Connection ~ 5500 2250
@@ -237,9 +217,9 @@ CS
 Text GLabel 2800 3350 2    51   Output ~ 0
 SCLK
 Text GLabel 2800 3450 2    51   Output ~ 0
-MOSI
+GLOBAL_MOSI
 Text GLabel 2300 3450 0    51   Input ~ 0
-MISO
+GLOBAL_MISO
 $Comp
 L Connector:Conn_01x04 J1
 U 1 1 5A111B0F
@@ -263,25 +243,17 @@ F 3 "" H 2650 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2650 1800 2650 1900
-Wire Wire Line
-	2650 1900 2650 2000
+	2650 1800 2650 2000
 Connection ~ 2650 1900
-Text GLabel 3050 1600 2    60   Output ~ 0
+Text GLabel 2900 1600 2    60   Output ~ 0
 VMot
 Wire Wire Line
 	2650 1600 2650 1700
 Wire Wire Line
-	2650 1600 2850 1600
-Wire Wire Line
-	2850 1600 3050 1600
+	2650 1600 2900 1600
 Connection ~ 2650 1600
 Wire Wire Line
-	5500 2250 5500 3550
-Wire Wire Line
-	5500 3550 5500 4850
-Wire Wire Line
-	5500 4850 5500 6150
+	5500 2250 5500 6150
 $Sheet
 S 4350 2850 1000 950 
 U 5A109A56
@@ -374,18 +346,7 @@ DIR3
 Text GLabel 2800 3850 2    51   Input ~ 0
 DIR4
 NoConn ~ 2800 3250
-$Comp
-L device:CP C1
-U 1 1 5A13C16B
-P 2850 1750
-F 0 "C1" H 2850 2000 50  0000 L CNN
-F 1 "100u" H 3050 1750 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D10.0mm_P5.00mm" H 2888 1600 30  0001 C CNN
-F 3 "" H 2850 1750 60  0000 C CNN
-	1    2850 1750
-	1    0    0    -1  
-$EndComp
-Connection ~ 2850 1600
 Wire Wire Line
-	2650 1900 2850 1900
+	5350 5950 5850 5950
+Connection ~ 5850 5700
 $EndSCHEMATC

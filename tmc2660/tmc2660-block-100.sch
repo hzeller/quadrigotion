@@ -499,15 +499,4 @@ $EndComp
 Wire Wire Line
 	1250 2200 1450 2200
 Connection ~ 1450 2500
-$Comp
-L device:CP C?
-U 1 1 5A13AFA9
-P 950 650
-F 0 "C?" H 975 750 50  0000 L CNN
-F 1 "100u" H 850 850 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D10.0mm_P5.00mm" H 988 500 30  0001 C CNN
-F 3 "" H 950 650 60  0000 C CNN
-	1    950  650 
-	1    0    0    -1  
-$EndComp
 $EndSCHEMATC
