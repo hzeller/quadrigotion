@@ -158,19 +158,11 @@ Wire Wire Line
 Wire Wire Line
 	4350 2250 3850 2250
 Wire Wire Line
-	3850 2250 3850 2700
-Wire Wire Line
-	3850 2700 3850 3550
-Wire Wire Line
-	3850 3550 3850 4850
-Wire Wire Line
-	3850 4850 3850 6150
+	3850 2250 3850 6150
 Wire Wire Line
 	3850 6150 4350 6150
 Wire Wire Line
-	5350 2250 5500 2250
-Wire Wire Line
-	5500 2250 6050 2250
+	5350 2250 6050 2250
 Wire Wire Line
 	5500 6150 5350 6150
 Wire Wire Line
@@ -180,15 +172,9 @@ Wire Wire Line
 	5350 3550 5500 3550
 Connection ~ 5500 3550
 Wire Wire Line
-	5350 2150 5650 2150
+	5350 2150 6050 2150
 Wire Wire Line
-	5650 2150 6050 2150
-Wire Wire Line
-	5650 2150 5650 3450
-Wire Wire Line
-	5650 3450 5650 4750
-Wire Wire Line
-	5650 4750 5650 6050
+	5650 2150 5650 6050
 Wire Wire Line
 	5650 6050 5350 6050
 Wire Wire Line
@@ -200,17 +186,9 @@ Connection ~ 5650 3450
 Wire Wire Line
 	5350 5700 5850 5700
 Wire Wire Line
-	5850 1800 5850 3100
+	5850 1800 5850 5950
 Wire Wire Line
-	5850 3100 5850 4400
-Wire Wire Line
-	5850 4400 5850 5700
-Wire Wire Line
-	5850 5700 5850 5950
-Wire Wire Line
-	5350 1800 5850 1800
-Wire Wire Line
-	5850 1800 6050 1800
+	5350 1800 6050 1800
 Wire Wire Line
 	5350 3100 5850 3100
 Connection ~ 5850 3100
@@ -265,9 +243,7 @@ F 3 "" H 2650 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2650 1800 2650 1900
-Wire Wire Line
-	2650 1900 2650 2000
+	2650 1800 2650 2000
 Connection ~ 2650 1900
 Text GLabel 3500 1600 2    60   Output ~ 0
 VMot
@@ -277,11 +253,7 @@ Wire Wire Line
 	2650 1600 3050 1600
 Connection ~ 2650 1600
 Wire Wire Line
-	5500 2250 5500 3550
-Wire Wire Line
-	5500 3550 5500 4850
-Wire Wire Line
-	5500 4850 5500 6150
+	5500 2250 5500 6150
 $Sheet
 S 4350 2850 1000 950 
 U 5A109A56
