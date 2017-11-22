@@ -11,7 +11,8 @@
 #  - The template only contains the layout for 100. Now in pcbnew update
 #    from schematic to import the wire-connected components for
 #    block 200,300,...
-#  - run ./layout-cloner.py ; Verify that the cloned blocks look good.
+#  - modify layout-cloner: edit numberOfClones and DoTransform()
+#  - run ./layout-cloner.py <filename>; Verify that the cloned blocks look good.
 #  - copy the cloned kicad_pcb to the main kicad pcb and edit from there,
 #    wiring up the rest.
 #
@@ -22,23 +23,40 @@ import sys
 import re
 from pcbnew import *
 
-# For now: hard-coded
-inputBoard = './tmc2660-quad.kicad_pcb'
+if len(sys.argv) < 2:
+    print "usage: ", sys.argv[0], "<filename> [<outfile>]"
+    exit(1)
 
-# The output file, once sufficently good
-outputBoardFile = './tmc2660-quad-cloned.kicad_pcb'
+inputBoard = sys.argv[1]
+outputBoardFile = sys.argv[2] if len(sys.argv) > 2 else inputBoard + ".cloned"
 
+# Don't copy these layers.
 excludeLayers = { 41, 44 }  # comment; edge cuts
 
 
-templateRefStart = 100	 # Starting point of numbering in the first hierarchical sheet
-templateRefModulo = 100  # Difference in the reference numbers between hierarchical sheet
-move_dx = FromMM(25)     # Spacing between clones in x direction
-move_dy = FromMM(0)      # Spacing between clones in y direction
-clonesX = 4              # Number of clones in x direction
-clonesY = 1              # Number of clones in y direction
+templateRefStart = 100	 # Starting point of numbering in template
+templateRefModulo = 100  # Difference between hierarchical sheets
 
-numberOfClones = clonesX * clonesY
+numberOfClones = 4
+
+# This is the function you want to implement do do the transformation.
+# 'object' is the object to operate on, operations such as
+#    object.Move(wxPoint)  and object.Rotate(wxPoint, angle) are supported
+# 'i' is the index of the block; the zero'th block is the template, so the
+#    smallest index is 1
+def DoTransform(object, i):
+    flipOverAt = numberOfClones / 2  # simply numberOfClones for no-flipping
+    move_dx = FromMM(25)
+    if i < flipOverAt:
+        delta = wxPoint(i * move_dx, 0)
+        object.Move(delta)
+    else:
+        testangle = 1800
+        object.Rotate(wxPoint(FromMM(125), FromMM(62.5)), testangle)
+        delta = wxPoint(-(i - flipOverAt) * move_dx, 0)
+        object.Move(delta)
+
+
 board = LoadBoard(inputBoard)
 
 # All the objects we extract from the template zone
@@ -97,7 +115,6 @@ for drawing in board.GetDrawings():
 
 # We've collected all template elements, now create clones from it.
 for i in range(1, numberOfClones):
-    deltaMove = wxPoint(i%clonesX *move_dx, i/clonesX*move_dy)
     netMapping = {}
     for moduleTuple in templateModuleTuples:
         cloneRef = moduleTuple[0] + str(moduleTuple[1] + i*templateRefModulo)
@@ -110,16 +127,18 @@ for i in range(1, numberOfClones):
 
         if cloneModule.GetLayer() is not templateModule.GetLayer():
             cloneModule.Flip(wxPoint(1,1))
-        cloneModule.SetPosition(templateModule.GetPosition() + deltaMove)
         cloneModule.SetOrientation(templateModule.GetOrientation())
 
-        refText = templateModule.Reference()
-        cloneModule.Reference().SetEffects(refText)
-        cloneModule.Reference().SetPosition(refText.GetPosition() + deltaMove)
+        # The clone module is placed somewhere on the canvas.
+        # To have the following relative transformations work, we move the
+        # module to the position of the template module to start.
+        cloneModule.SetPosition(templateModule.GetPosition())
 
-        valueText = templateModule.Value()
-        cloneModule.Value().SetEffects(valueText)
-        cloneModule.Value().SetPosition(valueText.GetPosition() + deltaMove)
+        # Font-size, thickness, relative position.
+        cloneModule.Reference().SetEffects(templateModule.Reference())
+        cloneModule.Value().SetEffects(templateModule.Value())
+
+        DoTransform(cloneModule, i)
 
         # Build a map of what nets are connected in the original module
         # versus the clone. We need that later to connect the right signals
@@ -133,20 +152,22 @@ for i in range(1, numberOfClones):
     # Now copy all the areas for this clone and connect the appropriate nets
     for zone in templateZones:
         zoneClone = zone.Duplicate()
-        zoneClone.Move(deltaMove)
-        zoneClone.SetNetCode(netMapping[zone.GetNetCode()])
+        DoTransform(zoneClone, i)
+        if zone.GetNetCode() in netMapping.keys():
+            zoneClone.SetNetCode(netMapping[zone.GetNetCode()])
         board.Add(zoneClone)
 
     # Same for tracks.
     for track in templateTracks:
         trackClone = track.Duplicate()
-        trackClone.Move(deltaMove)
-        trackClone.SetNetCode(netMapping[track.GetNetCode()])
+        DoTransform(trackClone, i)
+        if track.GetNetCode() in netMapping.keys():
+            trackClone.SetNetCode(netMapping[track.GetNetCode()])
         boardTracks.Append(trackClone)
 
     for drawing in templateDrawings:
         drawingClone = drawing.Duplicate()
-        drawingClone.Move(deltaMove)
+        DoTransform(drawingClone, i)
         board.Add(drawingClone)
 
 board.Save(outputBoardFile)
