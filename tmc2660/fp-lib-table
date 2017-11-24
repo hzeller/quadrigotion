@@ -1,3 +1,3 @@
 (fp_lib_table
-  (lib (name Fuses)(type KiCad)(uri ${KIPRJMOD}/../fuses.pretty)(options "")(descr ""))
+  (lib (name Quadrigotion)(type KiCad)(uri ${KIPRJMOD}/../quadrigotion.pretty)(options "")(descr ""))
 )

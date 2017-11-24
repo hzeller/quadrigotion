@@ -377,7 +377,7 @@ U 1 1 5A1105FC
 P 3200 1600
 F 0 "F1" V 3003 1600 50  0000 C CNN
 F 1 "Fuse" V 3094 1600 50  0000 C CNN
-F 2 "Fuses:BladeFuse-Mini_Keystone-3586" V 3130 1600 50  0001 C CNN
+F 2 "Quadrigotion:BladeFuse-Mini_Keystone-3586" V 3130 1600 50  0001 C CNN
 F 3 "" H 3200 1600 50  0001 C CNN
 	1    3200 1600
 	0    1    1    0   
