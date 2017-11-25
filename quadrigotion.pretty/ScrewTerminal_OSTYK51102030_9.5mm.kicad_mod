@@ -1,4 +1,4 @@
-(module ScrewTerminal_OSTYK51102_9.5mm (layer F.Cu) (tedit 5A1856CD)
+(module ScrewTerminal_OSTYK51102030_9.5mm (layer F.Cu) (tedit 5A19FAC9)
   (fp_text reference REF** (at -4 5) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
