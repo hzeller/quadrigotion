@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171114) (host pcbnew "(2017-11-24 revision a01d81e4b)-master")
+(kicad_pcb (version 20171114) (host pcbnew "(2017-11-26 revision 48a37c299)-master")
 
   (general
     (thickness 1.6)
@@ -24,7 +24,7 @@
     (38 B.Mask user)
     (39 F.Mask user)
     (40 Dwgs.User user)
-    (41 Cmts.User user hide)
+    (41 Cmts.User user)
     (42 Eco1.User user)
     (43 Eco2.User user)
     (44 Edge.Cuts user)
@@ -2176,21 +2176,6 @@
       (pts
         (xy 128.0254 61.204) (xy 126.2474 59.426) (xy 123.7074 59.426) (xy 121.9294 61.204) (xy 121.9294 63.871)
         (xy 123.7074 65.522) (xy 126.3744 65.522) (xy 128.0254 63.871)
-      )
-    )
-  )
-  (zone (net 0) (net_name "") (layer Cmts.User) (tstamp 5A10AE25) (hatch edge 0.508)
-    (connect_pads (clearance 0.4))
-    (min_thickness 0.254)
-    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
-    (polygon
-      (pts
-        (xy 130.686 101.42) (xy 130.686 59.42) (xy 98.686 59.42) (xy 98.686 101.42)
-      )
-    )
-    (filled_polygon
-      (pts
-        (xy 130.559 101.293) (xy 98.813 101.293) (xy 98.813 59.547) (xy 130.559 59.547)
       )
     )
   )
