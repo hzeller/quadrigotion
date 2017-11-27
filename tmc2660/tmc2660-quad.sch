@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:tmc2660-quad-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -352,21 +351,21 @@ Connection ~ 5850 5700
 $Comp
 L Mechanical:Mounting_Hole M0
 U 1 1 5A1112B3
-P 2300 4600
-F 0 "M0" H 2358 4720 50  0000 L CNN
-F 1 "Mount" H 2358 4629 50  0000 L CNN
-F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5" H 2500 4600 50  0001 C CNN
-F 3 "~" H 2500 4600 50  0001 C CNN
-	1    2300 4600
+P 2300 4550
+F 0 "M0" H 2250 4700 50  0000 L CNN
+F 1 "Mount" H 2200 4800 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5" H 2500 4550 50  0001 C CNN
+F 3 "~" H 2500 4550 50  0001 C CNN
+	1    2300 4550
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole M1
+L Mechanical:Mounting_Hole_PAD M1
 U 1 1 5A1112BA
 P 2700 4600
-F 0 "M1" H 2758 4720 50  0000 L CNN
-F 1 "Mount" H 2758 4629 50  0000 L CNN
-F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5" H 2900 4600 50  0001 C CNN
+F 0 "M1" H 2700 4800 50  0000 L CNN
+F 1 "Mount" H 2600 4900 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5_Pad" H 2900 4600 50  0001 C CNN
 F 3 "~" H 2900 4600 50  0001 C CNN
 	1    2700 4600
 	1    0    0    -1  
@@ -386,4 +385,15 @@ Wire Wire Line
 	3350 1600 3500 1600
 Text Label 2700 1600 0    60   ~ 0
 PowerIn
+$Comp
+L power:GND #PWR?
+U 1 1 5A1C0ADE
+P 2700 4700
+F 0 "#PWR?" H 2700 4450 50  0001 C CNN
+F 1 "GND" V 2705 4572 50  0000 R CNN
+F 2 "" H 2700 4700 50  0001 C CNN
+F 3 "" H 2700 4700 50  0001 C CNN
+	1    2700 4700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
