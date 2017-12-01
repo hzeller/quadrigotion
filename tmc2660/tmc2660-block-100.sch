@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:tmc2660-quad-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 5
 Title ""
 Date ""
 Rev ""
@@ -519,10 +520,10 @@ VHS
 Text Notes 4500 3750 0    51   ~ 0
 Sense Resistors alternatively\nalso with 100mOhm
 $Comp
-L power:GND #PWR?
+L power:GND #PWR03
 U 1 1 5A1C342B
 P 1650 4400
-F 0 "#PWR?" H 1650 4150 50  0001 C CNN
+F 0 "#PWR03" H 1650 4150 50  0001 C CNN
 F 1 "GND" H 1650 4250 50  0000 C CNN
 F 2 "" H 1650 4400 60  0000 C CNN
 F 3 "" H 1650 4400 60  0000 C CNN

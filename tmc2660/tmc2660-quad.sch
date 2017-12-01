@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:tmc2660-quad-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -119,7 +120,7 @@ U 1 1 5A1095ED
 P 2500 3450
 F 0 "J2" H 2550 2825 50  0000 C CNN
 F 1 "DataIn" H 2550 2916 50  0000 C CNN
-F 2 "Connectors_IDC:IDC-Header_2x08_Pitch2.54mm_Straight" H 2500 3450 50  0001 C CNN
+F 2 "Quadrigotion:IDC_Header_SMD_16pins" H 2500 3450 50  0001 C CNN
 F 3 "~" H 2500 3450 50  0001 C CNN
 	1    2500 3450
 	1    0    0    -1  
@@ -386,10 +387,10 @@ Wire Wire Line
 Text Label 2700 1600 0    60   ~ 0
 PowerIn
 $Comp
-L power:GND #PWR?
+L power:GND #PWR02
 U 1 1 5A1C0ADE
 P 2700 4700
-F 0 "#PWR?" H 2700 4450 50  0001 C CNN
+F 0 "#PWR02" H 2700 4450 50  0001 C CNN
 F 1 "GND" V 2705 4572 50  0000 R CNN
 F 2 "" H 2700 4700 50  0001 C CNN
 F 3 "" H 2700 4700 50  0001 C CNN
