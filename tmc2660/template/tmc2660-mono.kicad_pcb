@@ -36,7 +36,7 @@
   )
 
   (setup
-    (last_trace_width 0.4)
+    (last_trace_width 0.25)
     (user_trace_width 0.2)
     (user_trace_width 0.3)
     (user_trace_width 0.4)
@@ -300,7 +300,7 @@
     (descr "CP, Radial series, Radial, pin pitch=3.50mm, , diameter=8mm, Electrolytic Capacitor")
     (tags "CP Radial series Radial pin pitch 3.50mm  diameter 8mm Electrolytic Capacitor")
     (path /5A0C6878/5A0CA6BD)
-    (fp_text reference C107 (at 5.207 -4.97) (layer F.SilkS)
+    (fp_text reference C107 (at 6.731 -0.017) (layer F.SilkS)
       (effects (font (size 1.1 1.1) (thickness 0.18)))
     )
     (fp_text value 180u (at 1.75 5.31 90) (layer F.Fab)
