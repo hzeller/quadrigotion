@@ -88,4 +88,4 @@ testing has been done yet with a physical board.
 
 
 [BeagleG]: https://github.com/hzeller/beagleg
-[shared on OshPark]: https://oshpark.com/shared_projects/EgX2eroW
+[shared on OshPark]: https://oshpark.com/shared_projects/Lah9K8YI
