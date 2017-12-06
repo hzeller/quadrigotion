@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:tmc2660-quad-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 2 2
 Title ""
 Date ""
 Rev ""
@@ -63,10 +62,10 @@ F 3 "" H 4400 2450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C105
+L device:C C104
 U 1 1 5A0CA5D3
 P 2900 1700
-F 0 "C105" H 2800 2000 50  0000 L CNN
+F 0 "C104" H 2800 2000 50  0000 L CNN
 F 1 "100n" H 2700 1800 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 2938 1550 30  0001 C CNN
 F 3 "" H 2900 1700 60  0000 C CNN
@@ -76,10 +75,10 @@ F 5 "1276-2450-2-ND" H 2900 1700 60  0001 C CNN "DigiKey"
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C104
+L device:C C105
 U 1 1 5A0CA5DE
 P 3200 1700
-F 0 "C104" H 3150 2000 50  0000 L CNN
+F 0 "C105" H 3150 2000 50  0000 L CNN
 F 1 "100n" H 3150 1900 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 3238 1550 30  0001 C CNN
 F 3 "" H 3200 1700 60  0000 C CNN
@@ -394,7 +393,7 @@ Wire Wire Line
 	3050 1550 3050 1950
 Connection ~ 3050 1550
 Wire Wire Line
-	2700 3800 2900 3800
+	2700 3800 2800 3800
 Connection ~ 2800 3800
 Connection ~ 3400 2250
 Connection ~ 3400 2550
@@ -402,16 +401,16 @@ Connection ~ 3400 3150
 Wire Wire Line
 	3400 2250 3600 2250
 Wire Wire Line
-	3400 3300 3400 3450
+	3400 3300 3400 3350
 Connection ~ 3400 3350
 Wire Wire Line
-	3400 3050 3400 3200
+	3400 3050 3400 3100
 Connection ~ 3400 3100
 Wire Wire Line
-	3400 2450 3400 2600
+	3400 2450 3400 2500
 Connection ~ 3400 2500
 Wire Wire Line
-	3400 2200 3400 2350
+	3400 2200 3400 2250
 Connection ~ 3400 2300
 Wire Wire Line
 	4400 2150 4400 2100
@@ -424,20 +423,18 @@ Wire Wire Line
 Wire Wire Line
 	2300 3500 2300 3550
 Wire Wire Line
-	2000 3550 2300 3550
+	2000 3550 2250 3550
 Wire Wire Line
 	2250 2250 2350 2250
 Wire Wire Line
 	3400 2450 3600 2450
-Connection ~ 3400 3300
 Connection ~ 3400 3400
 Wire Wire Line
-	3400 3550 3800 3550
+	3400 3550 3750 3550
 Wire Wire Line
 	3400 2700 3800 2700
 Wire Wire Line
-	3400 2800 4400 2800
-Connection ~ 3400 3050
+	3400 2800 4250 2800
 Wire Wire Line
 	2350 2850 1950 2850
 Wire Wire Line
@@ -445,18 +442,18 @@ Wire Wire Line
 Wire Wire Line
 	1850 2400 2350 2400
 Wire Wire Line
-	1250 2500 2350 2500
+	1250 2500 1450 2500
 Wire Wire Line
 	2350 2600 1250 2600
 Wire Wire Line
 	2350 2700 1250 2700
 Connection ~ 3200 1550
 Wire Wire Line
-	3200 1850 3500 1850
+	3200 1850 3350 1850
 Connection ~ 3350 1850
 Connection ~ 3500 1550
 Wire Wire Line
-	2900 1550 3750 1550
+	2900 1550 3050 1550
 Wire Wire Line
 	3400 3100 3600 3100
 Wire Wire Line
@@ -492,12 +489,12 @@ F 3 "" H 4600 3200 60  0000 C CNN
 $EndComp
 Connection ~ 3800 2700
 Wire Wire Line
-	4400 3100 4400 3350
+	4400 3100 4400 3200
 Wire Wire Line
 	4400 3200 4600 3200
 Connection ~ 4400 3200
 Wire Wire Line
-	3400 3650 4400 3650
+	3400 3650 4200 3650
 Wire Wire Line
 	4100 3550 4200 3550
 Wire Wire Line
@@ -512,7 +509,6 @@ Wire Wire Line
 	4100 2150 4400 2150
 Wire Wire Line
 	4100 2450 4400 2450
-Connection ~ 4400 2450
 Wire Wire Line
 	2900 1850 2900 1950
 Text Label 2900 1950 1    39   ~ 0
@@ -520,14 +516,52 @@ VHS
 Text Notes 4500 3750 0    51   ~ 0
 Sense Resistors alternatively\nalso with 100mOhm
 $Comp
-L power:GND #PWR03
+L power:GND #PWR?
 U 1 1 5A1C342B
 P 1650 4400
-F 0 "#PWR03" H 1650 4150 50  0001 C CNN
+F 0 "#PWR?" H 1650 4150 50  0001 C CNN
 F 1 "GND" H 1650 4250 50  0000 C CNN
 F 2 "" H 1650 4400 60  0000 C CNN
 F 3 "" H 1650 4400 60  0000 C CNN
 	1    1650 4400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3050 1550 3200 1550
+Wire Wire Line
+	2800 3800 2900 3800
+Wire Wire Line
+	3400 2250 3400 2300
+Wire Wire Line
+	3400 2550 3400 2600
+Wire Wire Line
+	3400 3150 3400 3200
+Wire Wire Line
+	3400 3350 3400 3400
+Wire Wire Line
+	3400 3100 3400 3150
+Wire Wire Line
+	3400 2500 3400 2550
+Wire Wire Line
+	3400 2300 3400 2350
+Wire Wire Line
+	2250 3550 2300 3550
+Wire Wire Line
+	3400 3400 3400 3450
+Wire Wire Line
+	3200 1550 3500 1550
+Wire Wire Line
+	3350 1850 3500 1850
+Wire Wire Line
+	3500 1550 3750 1550
+Wire Wire Line
+	1450 2500 2350 2500
+Wire Wire Line
+	4250 2800 4400 2800
+Wire Wire Line
+	4400 3200 4400 3350
+Wire Wire Line
+	4200 3650 4400 3650
+Wire Wire Line
+	3750 3550 3800 3550
 $EndSCHEMATC
