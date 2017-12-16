@@ -341,9 +341,9 @@ Text GLabel 2800 3550 2    51   Output ~ 0
 DIR1
 Text GLabel 2800 3650 2    51   Output ~ 0
 DIR2
-Text GLabel 2800 3750 2    51   Input ~ 0
+Text GLabel 2800 3750 2    51   Output ~ 0
 DIR3
-Text GLabel 2800 3850 2    51   Input ~ 0
+Text GLabel 2800 3850 2    51   Output ~ 0
 DIR4
 NoConn ~ 2800 3250
 Wire Wire Line
