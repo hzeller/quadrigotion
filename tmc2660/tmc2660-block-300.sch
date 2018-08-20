@@ -3,11 +3,11 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
-Title ""
+Sheet 3 5
+Title "Quadrigotion"
 Date ""
 Rev ""
-Comp ""
+Comp "http://quadrigotion.org/"
 Comment1 ""
 Comment2 ""
 Comment3 ""
